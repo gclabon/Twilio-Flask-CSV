@@ -27,6 +27,7 @@
   <ItemGroup>
     <Content Include="config.ini" />
     <Content Include="contacts.csv" />
+    <Content Include="requirements.txt" />
     <Content Include="Templates\form.html" />
     <Content Include="Templates\success.html" />
   </ItemGroup>
