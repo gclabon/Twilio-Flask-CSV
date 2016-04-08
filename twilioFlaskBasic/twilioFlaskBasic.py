@@ -42,24 +42,6 @@ def message():
         formPost()
         return render_template('success.html');
 
-@app.route('/reply', methods=['POST'])
-def respond ():
-    number = request.values.get('From', None)
-    with open("contacts.csv") as csvfile:
-        reader = csv.reader(csvfile)
-        contact = ('')
-        for row in reader:
-            if row[2] in number:
-                contact = row[0]
-        if contact is not None:
-            msg = (contact + ", thanks for the message!")
-        else:
-            msg = ('Thanks for getting in touch!')
- 
-        resp = twilio.twiml.Response()
-        resp.message(msg)
- 
-        return str(resp)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
