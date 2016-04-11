@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1>Twilio Basic Web Sender</h1>
+    <h2>Enter the message for bulk recipients:</h2>
+    <form action="bulk"  id="bulk" method="POST">
+        <label for="msg">Message</label>
+        <input type="text" name="msg">
+        <fieldset>
+            <legend>Which Customers to send to?</legend>
+            <input type="checkbox" name="Retail" value="Retail" />Retail <br />
+            <input type="checkbox" name="Trade" value="trade" />Trade<br />
+            <input type="checkbox" name="Distribution" value="distribution" />Distribution<br />
+        </fieldset>
+        <input type="submit" id="bulk"name="bulk" value="Send" />
+    </form>
+</body>
+</html>
